@@ -2,7 +2,7 @@
 ***
 ## Portfolio
 ### 2017 CSharp
-**Een programma dat ik voor Exercism heb gemaakt is Sum_Of_Multiples**
+**Een programma dat ik voor Exercism heb gemaakt is Sum_Of_Multiples.**
 **De code:**
 ```
  static void Main(string[] args)
