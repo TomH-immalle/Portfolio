@@ -2,6 +2,43 @@
 ***
 ## Portfolio
 ### 2017 CSharp
+**ListBox met add en delete knop. De code:**
+```
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+
+
+        private void addButton_Click(object sender, RoutedEventArgs e)
+        {
+            ListBoxItem newItem = new ListBoxItem();
+            newItem.Content = textBox.Text;
+            listBox.Items.Add(newItem);
+            countTextBlock.Text = Convert.ToString("Aantal: "+listBox.Items.Count);
+        }
+
+        private void displayButton_Click(object sender, RoutedEventArgs e)
+        {
+            int index = Convert.ToInt32(indexTextBox.Text);
+            ListBoxItem item = (ListBoxItem)listBox.Items[index];
+            valueTextBox.Text = Convert.ToString(item.Content);
+        }
+
+        private void deleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            var del = listBox.SelectedItem;
+            if (del != null)
+            {
+                listBox.Items.Remove(del);
+            }
+            countTextBlock.Text = Convert.ToString("Aantal: " + listBox.Items.Count);
+        }
+    }
+```
 **Een programma dat ik voor Exercism heb gemaakt is Sum_Of_Multiples.**
 **De code:**
 ```
